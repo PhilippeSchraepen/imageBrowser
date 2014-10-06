@@ -50,8 +50,6 @@
 /* Sidebar Styles */
 
 .sidebar-nav {
-    position: absolute;
-    top: 0;
     width: 250px;
     margin: 0;
     padding: 0;
@@ -63,20 +61,19 @@
     line-height: 40px;
 }
 
-.sidebar-nav li a {
+.sidebar-nav li span {
     display: block;
     text-decoration: none;
     color: #999999;
 }
 
-.sidebar-nav li a:hover {
+.sidebar-nav li span:hover {
     text-decoration: none;
     color: #fff;
     background: rgba(255,255,255,0.2);
 }
 
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
+.sidebar-nav li span:focus {
     text-decoration: none;
 }
 
@@ -86,13 +83,12 @@
     line-height: 60px;
 }
 
-.sidebar-nav > .sidebar-brand a {
+.sidebar-nav > .sidebar-brand span {
     color: #999999;
 }
 
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
+.sidebar-nav > .sidebar-brand .selected{
+    color: #428bca;
 }
 
 @media(min-width:768px) {
@@ -120,4 +116,9 @@
         position: relative;
         margin-right: 0;
     }
+}
+
+//Custom sidebar scss
+h2{
+    margin-left: 10px;
 }

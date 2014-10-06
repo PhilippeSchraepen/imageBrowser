@@ -9,5 +9,10 @@
  */
 angular.module('imageBrowserApp')
   .controller('TilesCtrl', function ($scope) {
-  	console.log('tiles loaded')
+	$scope.visibleTiles = [];
+
+	$scope.$on('switchFolder', function(event, folder) {
+		$scope.visibleTiles = folder.tiles;
+	});
+
   });
