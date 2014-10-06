@@ -23,6 +23,9 @@ angular.module('imageBrowserApp')
 		$scope.$broadcast('switchFolder', activeFolder);
 	}
 
-
+	$scope.addFolder = function(){
+		console.log('test');
+		$scope.folders.push({'name': $scope.folderName, 'description': $scope.folderDescription, 'tiles': []});
+	}
 
   });

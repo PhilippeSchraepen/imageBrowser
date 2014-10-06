@@ -15,4 +15,6 @@ angular.module('imageBrowserApp')
 		$scope.visibleTiles = folder.tiles;
 	});
 
+	
+
   });
