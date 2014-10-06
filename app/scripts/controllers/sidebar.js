@@ -18,14 +18,21 @@ angular.module('imageBrowserApp')
 	];
 
 	$scope.switchFolder = function(index){
-		var activeFolder = $scope.folders[index];
-		$scope.activeIndex = index;
-		$scope.$broadcast('switchFolder', activeFolder);
+		if(!isNaN(index)){
+			var activeFolder = $scope.folders[index];
+			$scope.activeIndex = index;
+			$scope.$broadcast('switchFolder', activeFolder);
+		} else {
+			$scope.activeIndex = index;
+		}
 	}
 
 	$scope.addFolder = function(){
-		console.log('test');
 		$scope.folders.push({'name': $scope.folderName, 'description': $scope.folderDescription, 'tiles': []});
+	}
+
+	$scope.showAll = function(){
+		$scope.switchFolder('A');
 	}
 
   });

@@ -1,10 +1,17 @@
 <div ng-controller="SidebarCtrl">
 	<!-- Sidebar -->
 	<div id="sidebar-wrapper">
+		<h2>Discover</h2>
+		<ul class="sidebar-nav">
+			<li class="sidebar-brand">
+				<span ng-click="showAll()"><span id="folder-icon" class="glyphicon glyphicon-eye-open" ng-class="{'selected': activeIndex == 'A'}"></span>Discover</span>
+			</li>
+		</ul>
+
 		<h2>Folders</h2>
 		<ul class="sidebar-nav">
 			<li class="sidebar-brand" ng-repeat="folder in folders">
-				<span ng-click="switchFolder($index)" ng-class="{'selected': activeIndex == $index}"><span id="folder-icon" class="glyphicon" ng-class="{'glyphicon-folder-open': activeIndex == $index, 'glyphicon-folder-close': activeIndex != $index}" class=""></span>{{folder.name}}</span>
+				<span ng-click="switchFolder($index)" ng-class="{'selected': activeIndex == $index}"><span id="folder-icon" class="glyphicon" ng-class="{'glyphicon-folder-open': activeIndex == $index, 'glyphicon-folder-close': activeIndex != $index}"></span>{{folder.name}}</span>
 			</li>
 		</ul>
 		<button data-toggle="modal" data-target="#newFolder" class="footer" id="folder-new"><span class="glyphicon glyphicon-plus"></span> New</button>
